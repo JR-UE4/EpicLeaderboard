@@ -1,0 +1,21 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Epic Leaderboard",
+	"Description": "Free online leaderboard plugin for Unreal Engine 4",
+	"Category": "Network",
+	"CreatedBy": "EpicLeaderboard",
+	"CreatedByURL": "http://EpicLeaderboard.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EnabledByDefault": true,
+	"Modules": [
+		{
+			"Name": "EpicLeaderboard",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
