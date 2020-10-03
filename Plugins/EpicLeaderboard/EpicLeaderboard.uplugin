@@ -17,7 +17,7 @@
     {
       "Name": "EpicLeaderboard",
       "Type": "Runtime",
-      "LoadingPhase": "PreDefault",
-    },
+      "LoadingPhase": "Default"
+    }
   ]
 }
