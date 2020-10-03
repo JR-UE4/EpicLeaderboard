@@ -1,6 +1,6 @@
 // Copyright 2018 EpicLeaderboard.com, All Rights Reserved.
 #include "EpicLeaderboardObject.h"
-#include "SecureHash.h"
+#include "Runtime/Core/Public/Misc/SecureHash.h"
 #include "Runtime/JsonUtilities/Public/JsonUtilities.h"
 
 #include <string>

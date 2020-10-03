@@ -1,6 +1,6 @@
 // Copyright 2018 EpicLeaderboard.com, All Rights Reserved.
 #pragma once
-#include "ModuleManager.h"
+#include "Modules/ModuleManager.h"
 
 /**
  * The public interface to this module

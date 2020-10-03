@@ -1,6 +1,7 @@
 {
   "FileVersion": 3,
   "Version": 1,
+  "EngineVersion" : "4.25.0",
   "VersionName": "1.0",
   "FriendlyName": "Epic Leaderboard",
   "Description": "Free online leaderboard plugin for Unreal Engine 4",
@@ -16,7 +17,8 @@
     {
       "Name": "EpicLeaderboard",
       "Type": "Runtime",
-      "LoadingPhase": "Default"
-    }
+      "LoadingPhase": "PreDefault",
+      "WhitelistPlatforms": [ "Win64", "Win32" ]
+    },
   ]
 }
