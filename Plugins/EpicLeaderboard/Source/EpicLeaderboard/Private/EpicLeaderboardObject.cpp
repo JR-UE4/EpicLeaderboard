@@ -63,7 +63,11 @@ void UEpicLeaderboardObject::GetLeaderboardEntries(FString PlayerName, bool Arou
 {
 	//setup the request
 	FString url = FString::Printf(TEXT("http://%s/api/getScores.php?accessID=%s&username=%s&around=%d"), TEXT("epicleaderboard.com"), *ID, *PlayerName, AroundPlayer);
-	TSharedRef<IHttpRequest> Request = FHttpModule::Get().CreateRequest();
+	//TSharedRef<IHttpRequest> Request = FHttpModule::Get().CreateRequest(); // 4.25 and older
+	// New Http module for 4.26 and newer version ue4 and ue5
+	FHttpModule& http = FHttpModule::Get();
+	TSharedPtr<IHttpRequest, ESPMode::ThreadSafe> Request = http.CreateRequest();
+	
 	Request->OnProcessRequestComplete().BindUObject(this, &UEpicLeaderboardObject::OnHighscoreResponseReceived);
 
 	Request->SetURL(url);
@@ -152,7 +156,11 @@ void UEpicLeaderboardObject::SubmitScoreInternal(FString username, float score, 
 	//setup the request
 	FString url = FString::Printf(TEXT("http://%s/api/submitScore.php"), TEXT("epicleaderboard.com"));
 
-	TSharedRef<IHttpRequest> Request = FHttpModule::Get().CreateRequest();
+	//TSharedRef<IHttpRequest> Request = FHttpModule::Get().CreateRequest(); // 4.25 and older
+	// New Http module for 4.26 and newer version ue4 and ue5
+	FHttpModule& http = FHttpModule::Get();
+	TSharedPtr<IHttpRequest, ESPMode::ThreadSafe> Request = http.CreateRequest();
+	
 	Request->OnProcessRequestComplete().BindUObject(this, &UEpicLeaderboardObject::OnScoreSubmitResponseReceived);
 
 	Request->SetURL(url);
